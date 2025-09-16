@@ -10,6 +10,7 @@ try:
     else:
         discounted_price = REGULAR_PRICE * (1 - DISCOUNT_RATE)
         total_cost = discounted_price * quantity
+        
         FIELD_WIDTH = 10 
 
         print(f"обычная цена (1 шт.):     {REGULAR_PRICE:>{FIELD_WIDTH}.2f} руб.")
