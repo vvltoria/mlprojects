@@ -38,8 +38,6 @@ class SubsetGenerator:
         return results
 
 
-
-
 class TwoSumFinder:
     def find_pair(self, nums_list: list, target: int) -> list | None:
         seen_map = {}  
@@ -63,35 +61,33 @@ class StringReverser:
         return " ".join(reversed_words)
 
 
-
-
 if __name__ == "__main__":
-    print("\n--- Задача 1: Римские числа ---")
+    print("\nзадача 1: римские числа")
     converter = RomanConverter()
     test_roman = "MCMXCIV" 
-    print(f"Число '{test_roman}' в int: {converter.to_integer(test_roman)}")
+    print(f"число '{test_roman}' в int: {converter.to_integer(test_roman)}")
     test_roman_2 = "LVIII" 
-    print(f"Число '{test_roman_2}' в int: {converter.to_integer(test_roman_2)}")
+    print(f"число '{test_roman_2}' в int: {converter.to_integer(test_roman_2)}")
 
     
-    print("\n--- Задача 2: Уникальные подмножества ---")
+    print("\nзадача 2: уникальные подмножества  ")
     subset_gen = SubsetGenerator()
     test_nums_1 = [1, 2, 3]
-    print(f"Подмножества для {test_nums_1}: {subset_gen.get_subsets(test_nums_1)}")
+    print(f"подмножества для {test_nums_1}: {subset_gen.get_subsets(test_nums_1)}")
     
     
-    print("\n--- Задача 3: Поиск суммы (Two-Sum) ---")
+    print("\nзадача 3: поиск суммы (two-sum)  ")
     finder = TwoSumFinder()
     test_nums_2 = [2, 7, 11, 15]
     target_1 = 9
-    print(f"Индексы для {test_nums_2} (сумма {target_1}): {finder.find_pair(test_nums_2, target_1)}")
+    print(f"индексы для {test_nums_2} (сумма {target_1}): {finder.find_pair(test_nums_2, target_1)}")
     target_2 = 26
-    print(f"Индексы для {test_nums_2} (сумма {target_2}): {finder.find_pair(test_nums_2, target_2)}")
+    print(f"индексы для {test_nums_2} (сумма {target_2}): {finder.find_pair(test_nums_2, target_2)}")
     
     
-    print("\n--- Задача 4: Переворот слов в строке ---")
+    print("\nзадача 4: переворот слов в строке  ")
     reverser = StringReverser()
     test_str_1 = "  hello world  "
-    print(f"Строка: '{test_str_1}'\nРезультат: '{reverser.reverse_words(test_str_1)}'")
+    print(f"строка: '{test_str_1}'\nрезультат: '{reverser.reverse_words(test_str_1)}'")
     test_str_2 = "the sky is blue"
-    print(f"\nСтрока: '{test_str_2}'\nРезультат: '{reverser.reverse_words(test_str_2)}'")
+    print(f"\nстрока: '{test_str_2}'\nрезультат: '{reverser.reverse_words(test_str_2)}'")

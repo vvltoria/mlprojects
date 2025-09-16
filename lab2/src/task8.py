@@ -32,15 +32,15 @@ def calculate_molar_mass(formula: str, weights_dict: dict) -> float:
     try:
         matches = re.findall(r'([A-Z][a-z]*)(\d*)', formula)  
         if not matches:
-            raise ValueError(f"Не удалось распознать формулу: {formula}")
+            raise ValueError(f"не удалось распознать формулу: {formula}")
         for (element, count_str) in matches:
             if element not in weights_dict:
-                raise ValueError(f"Неизвестный элемент в словаре: {element}")
+                raise ValueError(f"неизвестный элемент в словаре: {element}")
             count = int(count_str) if count_str else 1          
             total_mass += weights_dict[element] * count
             
     except ValueError as e:
-        print(f"Ошибка при расчете '{formula}': {e}")
+        print(f"ошибка при расчете '{formula}': {e}")
         return 0.0
         
     return total_mass
@@ -48,12 +48,12 @@ def calculate_molar_mass(formula: str, weights_dict: dict) -> float:
 
 if __name__ == "__main__":
     
-    INPUT_FILE = 'formulas.csv'
+    INPUT_FILE = 'data/formulas.csv'
     OUTPUT_FILE = 'compounds.pkl'  
     
     compounds_list = []  
     
-    print(f"--- 1. Чтение CSV файла '{INPUT_FILE}'... ---")
+    print(f"чтение CSV файла '{INPUT_FILE}'...")
     
     try:
         with open(INPUT_FILE, mode='r', encoding='utf-8') as f:
