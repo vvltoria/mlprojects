@@ -1,0 +1,28 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.DocumentRevisions-V100
+.Spotlight-V100
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+__pycache__/
+*.py[cod]
+*$py.class
+
+# CatBoost output
+catboost_info/
+
+# Joblib/Saved models
+*.joblib
+
+# OS generated files
+ehthumbs.db
+Thumbs.db
